@@ -1,4 +1,4 @@
-# theEverythingLauncher
+# The Everything Launcher
 A launcher to put all your things in one place
 
 ## License & Usage
