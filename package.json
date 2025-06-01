@@ -2,13 +2,14 @@
   "main": "electron/main.js",
   "scripts": {
     "start": "concurrently \"npm run react-start\" \"npm run electron-start\"",
-    "react-start": "react-scripts start",
+    "react-start": "cross-env BROWSER=none react-scripts start",
     "electron-start": "wait-on http://localhost:3000 && electron .",
     "build": "react-scripts build",
     "electron-pack": "electron-builder"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
     "electron": "^36.3.2",
     "electron-builder": "^26.0.12",
     "react-scripts": "^5.0.1",
@@ -27,7 +28,10 @@
     ]
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@mantine/core": "^8.0.2",
+    "@mantine/hooks": "^8.0.2"
+    
   }
 }
