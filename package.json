@@ -1,7 +1,33 @@
 {
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "concurrently \"npm run react-start\" \"npm run electron-start\"",
+    "react-start": "react-scripts start",
+    "electron-start": "wait-on http://localhost:3000 && electron .",
+    "build": "react-scripts build",
+    "electron-pack": "electron-builder"
+  },
   "devDependencies": {
     "concurrently": "^9.1.2",
     "electron": "^36.3.2",
+    "electron-builder": "^26.0.12",
+    "react-scripts": "^5.0.1",
     "wait-on": "^8.0.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
