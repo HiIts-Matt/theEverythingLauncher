@@ -1,0 +1,15 @@
+# Node stuff
+node_modules/
+.env
+.DS_Store
+*.log
+
+# Build output
+/build
+/dist
+
+# Electron dev stuff
+*.tsbuildinfo
+
+# Optional: VS Code
+.vscode/
